@@ -1,7 +1,9 @@
 version: "2"
 services:
     nginx:
-        image: nginx:1.12.0
+        build:
+            context: ./services/nginx
+            dockerfile: Dockerfile
         ports:
             - "80:80"
         depends_on:

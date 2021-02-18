@@ -20,7 +20,7 @@ RUN apt-get install php7.1-fpm php7.1-gd php7.1-cli php7.1-curl php7.1-dev php7.
 RUN curl -s https://packagecloud.io/install/repositories/phalcon/stable/script.deb.sh | bash && \
     apt-get install php7.1-phalcon -y
 
-RUN pecl install swoole && \
+RUN pecl install swoole-4.5.10 && \
     echo "extension=swoole.so" > /etc/php/7.1/mods-available/swoole.ini && \
     ln -s /etc/php/7.1/mods-available/swoole.ini /etc/php/7.1/cli/conf.d/20-swoole.ini && \
     ln -s /etc/php/7.1/mods-available/swoole.ini /etc/php/7.1/fpm/conf.d/20-swoole.ini
