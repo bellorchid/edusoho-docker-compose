@@ -46,7 +46,9 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 WORKDIR /home/wwwroot
 
-COPY ./fpm-pool-www.conf /etc/php/7.1/fpm/pool.d/www.conf
+COPY ./conf/fpm/pool.d/www.conf /etc/php/7.1/fpm/pool.d/www.conf
+COPY ./conf/cli/php.ini /etc/php/7.1/cli/php.ini
+COPY ./conf/fpm/php.ini /etc/php/7.1/fpm/php.ini
 RUN mkdir /run/php/ -p
 
 EXPOSE 9000
