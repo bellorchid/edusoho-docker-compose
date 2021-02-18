@@ -1,4 +1,4 @@
-# docker-php7 - Docker tooling for php developer
+# docker-php7.1 - Docker tooling for php developer
 
 
 ### Table of Contents
@@ -12,9 +12,10 @@ Description
 docker-compose include services below:
 
 * nginx 1.12.0
-* php 7.1.5 (with-ext: redis、phalcon 3.1.2、swoole 2.0.8、curl, json, mcrypt, openssl, PDO, PDO-mysql, mbstring)
+* php 7.1.33 (with-ext: redis、phalcon 3.1.2、swoole 4.5.10、curl, json, mcrypt, openssl, PDO, PDO-mysql, mbstring)
 * mysql 5.7
 * redis 3.2.9
+* node 12
 
 Usage
 =====

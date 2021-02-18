@@ -1,3 +1,4 @@
 *.conf
 !.gitignore
 !test.conf
+!edusoho-*.conf
