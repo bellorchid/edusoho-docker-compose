@@ -11,6 +11,8 @@ Description
 
 docker-compose include services below:
 
+* Support: `linux/amd64`  `linux/arm64/v8`
+
 * nginx 1.12.0
 * php 7.1.33 (with-ext: redis、phalcon 3.1.2、swoole 4.5.10、curl, json, mcrypt, openssl, PDO, PDO-mysql, mbstring)
 * mysql 5.7
