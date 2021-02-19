@@ -36,6 +36,9 @@ RUN cd / && \
 RUN apt-get install supervisor cron --allow-unauthenticated -y
 RUN service supervisor start
 
+# crontab
+RUN sed -i '/session    required   pam_loginuid.so/c\#session    required   pam_loginuid.so' /etc/pam.d/cron
+
 COPY ./.bashrc /root/.bashrc
 
 # generate ssh key
@@ -53,3 +56,4 @@ RUN mkdir /run/php/ -p
 
 EXPOSE 9000
 CMD ["/usr/sbin/php-fpm7.1", "-F"]
+# CMD ["/bin/bash -c '/etc/init.d/cron start'"]
